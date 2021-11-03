@@ -1,5 +1,7 @@
-const TorListController = require('../controllers/torListController')
-const onionApi = require('../services/onionApi')
+const express = require('express')
+const routes = express.Router()
+const controller = require('../controllers/controller')
+
 
 //routes definitions
 module.exports = (routes) => {
@@ -7,13 +9,13 @@ module.exports = (routes) => {
     //GET - full IPs list
     routes.get(
         '/torlist/full',
-        // onionApi
+        controller.fullIpList
     )
 
     //POST - add IP to ban DB
     routes.post(
         '/torlist/addban',
-        [Schema],
+        // [Schema],
         // TorListController.addBan
     )
 
