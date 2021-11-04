@@ -1,6 +1,8 @@
+//structure of banned IPs' db
+
 'use strict';
 
-const tableName = 'ip-ban'
+const tableName = 'ipBan'
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -16,6 +18,11 @@ module.exports = {
       ipNumber: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+
+      status: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
       }
 
     })

@@ -1,15 +1,17 @@
+//model to represent the content and structure of banned IPs' db
+
 const { Model, DataTypes} = require('sequelize')
 
-class ipBan extends Model {
+class IpBan extends Model {
     static init(sequelize) {
         super.init({
             ipNumber: DataTypes.STRING,
             status: DataTypes.BOOLEAN
         },{
             sequelize,
-            tableName:'ip_numbers'
+            tableName:'ipBan'
         })
     }
 }
 
-module.exports = ipBan
+module.exports = IpBan

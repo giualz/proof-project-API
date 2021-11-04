@@ -1,28 +1,28 @@
 const express = require('express')
-const routes = express.Router()
 const controller = require('../controllers/controller')
-
+const {ipBanSchema} = require('../schemas/ipBanSchema')
+const routes = express.Router()
 
 //routes definitions
-module.exports = (routes) => {
+module.exports = (app) => {
 
-    //GET - full IPs list
-    routes.get(
+    //GET - full IPs' list
+    app.get(
         '/torlist/full',
         controller.fullIpList
-    )
+    );
 
-    //POST - add IP to ban DB
-    routes.post(
+    //POST - add IP to banned IPs' DB
+    app.post(
         '/torlist/addban',
-        // [Schema],
-        // TorListController.addBan
-    )
+        [ipBanSchema],
+        controller.addBan
+    );
 
-    //GET - IPs list without banned ones
-    routes.get(
+    //GET - full valid IPs' list - excludes banned IPs
+    app.get(
         '/torlist/bansout',
-        // TorListController.bansOutIpList
+        controller.bansOutIpList
     )
 
 }
