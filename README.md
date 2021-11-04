@@ -1,7 +1,7 @@
 
 # The Tor Project
 
-This project was developed using instructions given by Proof.
+This application is able to get IPs list from two different sources, include an IP to be banned on the database, and get the same IPs list excluding the banned IPs.
 
 # Developper
 
