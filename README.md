@@ -9,10 +9,6 @@ Client of an application which is able to get IPs list from two different source
 - https://br.linkedin.com/in/giulia-alzuguir
 - https://www.instagram.com/giualz/
   
-# Deployment
-
-
-
   
 ## Endpoints
 
@@ -60,7 +56,7 @@ Start the server
   
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+https://docs.google.com/document/d/1T9ugPFtpxLqVgyTu58yxMQ4vp9_3D0j8BSjyTqLwRAo/edit?usp=sharing
 
   
 ## Tech Stack
